@@ -3,5 +3,6 @@ language: generic
 dist: xenial
 
 deploy:
-        provider: release
-        skip_cleanup: true
+  - provider: script
+    script: python hello.py
+    skip_cleanup: true
