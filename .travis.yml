@@ -7,5 +7,6 @@ deploy:
     script: python hello.py
     skip_cleanup: true
     on:
+      condition: $(bash check_file_changed.sh) = 0
       branch:
          - master
