@@ -1,0 +1,7 @@
+language: generic
+
+dist: xenial
+
+deploy:
+        provider: release
+        skip_cleanup: true
