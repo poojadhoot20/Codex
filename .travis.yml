@@ -2,6 +2,9 @@ language: generic
 
 dist: xenial
 
+before_deploy:
+  - cp a.sh a_$TRAVIS_BUILD_NUMBER.sh
+
 deploy:
   - provider: script
     script: python hello.py
