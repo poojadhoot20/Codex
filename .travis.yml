@@ -8,5 +8,5 @@ deploy:
     skip_cleanup: true
     on:
       condition: $(bash .travisci/check_file_changed.sh a.sh) = 0
-      branch:
-         - master
+      tags: false
+      all_branches: true
