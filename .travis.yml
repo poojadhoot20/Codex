@@ -7,6 +7,6 @@ deploy:
     script: python hello.py
     skip_cleanup: true
     on:
-      condition: $(bash .travisci/check_file_changed.sh a.sh) = 0
+      condition: $(bash -c 'cd .travisci/ && check_file_changed.sh a.sh') = 0
       branch:
          - master
