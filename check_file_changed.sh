@@ -4,11 +4,11 @@ check_file_changed()
 {
         pwd
 	echo "In the script"	
-	cd ~
 	if $(git whatchanged -n 1 | grep -q "$1");
+	then
 		cp "nomad_jobs/$1" ".travisci/upload_activation_s3/$(cut -d"." -f1<<<$1)_`date -I`_$TRAVIS_BUILD_NUMBER.$(cut -d"." -f2<<<$1)"
 		echo "Coding in echo"
-		then return 0;
+		return 0;
 	else
 		return 1;
 
