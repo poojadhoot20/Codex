@@ -7,6 +7,5 @@ deploy:
     script: python hello.py
     skip_cleanup: true
     on:
-      tags: false
       all_branches: true
-      condition: $(bash check_file_changed.sh a.sh) = 1
+      condition: $(bash check_file_changed.sh a.sh) = 0

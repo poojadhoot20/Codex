@@ -11,6 +11,7 @@ check_file_changed()
 		then return 0; 
 	else 
 		echo "Code is in else loop"
+		print "Code is in print loop"
 		return 1; 
 	fi	
 }
