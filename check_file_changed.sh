@@ -18,7 +18,7 @@ check_file_changed()
 #		echo "Code is in else loop"
 #		print "Code is in print loop"
 #		return 1; 
-#	fi	
+	fi	
 }
 
 check_file_changed "$@"
