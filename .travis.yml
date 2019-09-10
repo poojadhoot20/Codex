@@ -8,4 +8,4 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
-      condition: $(bash check_file_changed.sh a.sh) = 0
+      condition: $(bash check_file_changed.sh a.sh) = 100
