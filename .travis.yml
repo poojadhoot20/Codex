@@ -4,8 +4,13 @@ dist: xenial
 
 deploy:
   - provider: script
-    script: python hello.py
+    script: bash .travisci/copy_files.sh
     skip_cleanup: true
     on:
       all_branches: true
-      condition: $(bash check_file_changed.sh a.sh) = 100
+      condition: $(bash .travisci/check_file_changed.sh a.sh) = 100
+    after_success:
+            - provider: script
+              skip_cleanup: true
+              script: python hello.py
+
